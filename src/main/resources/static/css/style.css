@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+.header {
+    background-color: #2f2f2f;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-controls input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#filterBtn {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dropdown-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dropdown-group label {
+    font-weight: bold;
+}
+
+.controls select {
+    padding: 5px;
+}
+
+.green-btn,
+#addBtn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.green-btn:hover,
+#addBtn:hover {
+    background-color: #218838;
+}
+
+.employee-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.employee-card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.employee-card button {
+    margin: 5px 5px 0 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-actions button {
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+#saveBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+#cancelBtn {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+.filter-sidebar {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    background: white;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    width: 250px;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
+    z-index: 998;
+}
+
+.filter-sidebar label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.filter-sidebar input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-sidebar button {
+    margin-top: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.input-error {
+    border-color: red;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+/* <576px */
+@media (max-width: 575.98px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .top-controls input[type="text"] {
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown-group {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .dropdown-group select {
+        width: 45%;
+    }
+
+    #addBtn {
+        width: 100%;
+    }
+
+    .employee-card {
+        width: 100%;
+    }
+
+    #filterBtn {
+        width: 100%;
+    }
+
+    #searchBar {
+        width: 100%;
+    }
+}
+
+/* >=576px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .dropdown-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dropdown-group select {
+        width: auto;
+    }
+
+    #addBtn {
+        margin-left: auto;
+    }
+
+    .employee-card {
+        width: 100%;
+    }
+}
+/*  >= 768 and <= 992 */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .dropdown-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dropdown-group select {
+        width: auto;
+    }
+
+    #addBtn {
+        margin-left: auto;
+    }
+
+    .employee-card {
+        width: calc(33.33% - 20px);
+    }
+
+}
+
+/* >=992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .top-controls {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .controls {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .dropdown-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .employee-card {
+        width: calc(30.33% - 20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .employee-card {
+        width: calc(30.33% - 20px);
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .top-controls {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .controls {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .dropdown-group {
+        flex-direction: row;
+        align-items: center;
+    }
+}
