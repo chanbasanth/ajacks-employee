@@ -23,7 +23,7 @@ All data is stored in **localStorage**, so no backend is required. You can optio
 ## 🧑‍💻 Setup Instructions
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/employee-directory.git
+git clone https://github.com/chanbasanth/ajacks-employee.git
 cd employee-directory
 2. (Optional) Run with Spring Boot + Freemarker
 Make sure you have JDK 8+ and Maven installed
